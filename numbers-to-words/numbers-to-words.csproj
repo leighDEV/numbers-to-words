@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B9C7BC07-AB70-4522-8019-16038EFD189E}</ProjectGuid>
+    <ProjectGuid>{0D1DC502-645E-4621-8E15-06DF084BD11F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>numbers_to_words</RootNamespace>
     <AssemblyName>numbers-to-words</AssemblyName>
