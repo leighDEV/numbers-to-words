@@ -30,11 +30,11 @@
         {
             this.btnConvert = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.tbxNumbers = new System.Windows.Forms.TextBox();
             this.lblText = new System.Windows.Forms.Label();
             this.lblNumbers = new System.Windows.Forms.Label();
             this.lblWords = new System.Windows.Forms.Label();
             this.ptbText = new System.Windows.Forms.PictureBox();
+            this.tbxNumbers = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbText)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,14 +60,6 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // tbxNumbers
-            // 
-            this.tbxNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxNumbers.Location = new System.Drawing.Point(39, 72);
-            this.tbxNumbers.Name = "tbxNumbers";
-            this.tbxNumbers.Size = new System.Drawing.Size(490, 31);
-            this.tbxNumbers.TabIndex = 1;
-            // 
             // lblText
             // 
             this.lblText.AutoSize = true;
@@ -75,9 +67,8 @@
             this.lblText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblText.Location = new System.Drawing.Point(48, 199);
             this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(60, 24);
+            this.lblText.Size = new System.Drawing.Size(0, 24);
             this.lblText.TabIndex = 2;
-            this.lblText.Text = "label1";
             // 
             // lblNumbers
             // 
@@ -108,15 +99,23 @@
             this.ptbText.TabIndex = 4;
             this.ptbText.TabStop = false;
             // 
+            // tbxNumbers
+            // 
+            this.tbxNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxNumbers.Location = new System.Drawing.Point(39, 72);
+            this.tbxNumbers.Name = "tbxNumbers";
+            this.tbxNumbers.Size = new System.Drawing.Size(490, 31);
+            this.tbxNumbers.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 366);
+            this.Controls.Add(this.tbxNumbers);
             this.Controls.Add(this.lblWords);
             this.Controls.Add(this.lblNumbers);
             this.Controls.Add(this.lblText);
-            this.Controls.Add(this.tbxNumbers);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnConvert);
             this.Controls.Add(this.ptbText);
@@ -136,11 +135,11 @@
 
         private System.Windows.Forms.Button btnConvert;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.TextBox tbxNumbers;
         private System.Windows.Forms.Label lblText;
         private System.Windows.Forms.Label lblNumbers;
         private System.Windows.Forms.Label lblWords;
         private System.Windows.Forms.PictureBox ptbText;
+        private System.Windows.Forms.TextBox tbxNumbers;
     }
 }
 
