@@ -30,12 +30,10 @@
         {
             this.btnConvert = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.lblText = new System.Windows.Forms.Label();
             this.lblNumbers = new System.Windows.Forms.Label();
             this.lblWords = new System.Windows.Forms.Label();
-            this.ptbText = new System.Windows.Forms.PictureBox();
-            this.tbxNumbers = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbText)).BeginInit();
+            this.tbNumbers = new System.Windows.Forms.TextBox();
+            this.tbWords = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnConvert
@@ -60,16 +58,6 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // lblText
-            // 
-            this.lblText.AutoSize = true;
-            this.lblText.BackColor = System.Drawing.Color.White;
-            this.lblText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblText.Location = new System.Drawing.Point(48, 199);
-            this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(0, 24);
-            this.lblText.TabIndex = 2;
-            // 
             // lblNumbers
             // 
             this.lblNumbers.AutoSize = true;
@@ -90,42 +78,40 @@
             this.lblWords.TabIndex = 3;
             this.lblWords.Text = "Words";
             // 
-            // ptbText
+            // tbNumbers
             // 
-            this.ptbText.BackColor = System.Drawing.Color.White;
-            this.ptbText.Location = new System.Drawing.Point(39, 186);
-            this.ptbText.Name = "ptbText";
-            this.ptbText.Size = new System.Drawing.Size(490, 102);
-            this.ptbText.TabIndex = 4;
-            this.ptbText.TabStop = false;
+            this.tbNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNumbers.Location = new System.Drawing.Point(39, 72);
+            this.tbNumbers.Name = "tbNumbers";
+            this.tbNumbers.Size = new System.Drawing.Size(490, 31);
+            this.tbNumbers.TabIndex = 5;
             // 
-            // tbxNumbers
+            // tbWords
             // 
-            this.tbxNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxNumbers.Location = new System.Drawing.Point(39, 72);
-            this.tbxNumbers.Name = "tbxNumbers";
-            this.tbxNumbers.Size = new System.Drawing.Size(490, 31);
-            this.tbxNumbers.TabIndex = 5;
+            this.tbWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbWords.Location = new System.Drawing.Point(39, 186);
+            this.tbWords.Multiline = true;
+            this.tbWords.Name = "tbWords";
+            this.tbWords.Size = new System.Drawing.Size(490, 133);
+            this.tbWords.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 366);
-            this.Controls.Add(this.tbxNumbers);
+            this.Controls.Add(this.tbWords);
+            this.Controls.Add(this.tbNumbers);
             this.Controls.Add(this.lblWords);
             this.Controls.Add(this.lblNumbers);
-            this.Controls.Add(this.lblText);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnConvert);
-            this.Controls.Add(this.ptbText);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Numbers to Words Converter";
-            ((System.ComponentModel.ISupportInitialize)(this.ptbText)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,11 +121,10 @@
 
         private System.Windows.Forms.Button btnConvert;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Label lblText;
         private System.Windows.Forms.Label lblNumbers;
         private System.Windows.Forms.Label lblWords;
-        private System.Windows.Forms.PictureBox ptbText;
-        private System.Windows.Forms.TextBox tbxNumbers;
+        private System.Windows.Forms.TextBox tbNumbers;
+        private System.Windows.Forms.TextBox tbWords;
     }
 }
 

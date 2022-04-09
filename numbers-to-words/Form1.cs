@@ -23,67 +23,55 @@ namespace numbers_to_words
             {
                 int i = 1;
 
-                string words = tbxNumbers.Text;
+                string text = tbNumbers.Text;
                 int num;
 
-                if (int.TryParse(words, out num))
-                {
-                    while (i > 0)
-                    {
-                        if (num.Equals(0))
-                        {
-                            lblText.Text = "zero";
-                        }
-                        if (num > 9999)
-                        {
-                            lblText.Text = "Error. Number should be less than 10000.\n";
-                            continue;
-                        }
+                int.TryParse(text, out num);
 
-                        lblText.Text = Converting(num);
-                        i++;
-                    }
+                string[] words = new string[] { "", "one", "two", "three", "four", "five", "six", "seven",
+                "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen",
+                "eighteen", "nineteen", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
+
+
+                if (num > 999)
+                {
+                    int n = num / 1000;
+                    tbWords.Text = tbWords + $"{words[n]} thousand ";
+                    num -= n * 1000;
                 }
-                
+
+                if (num > 99)
+                {
+                    int n = num / 100;
+                    tbWords.Text = tbWords + $"{words[n]} hundred ";
+                    num -= n * 100;
+                }
+
+                if (num > 20)
+                {
+                    int n = num / 10;
+                    tbWords.Text = tbWords + $"{words[n + 18]} ";
+                    num -= n * 10;
+                }
+
+                if (num == 0)
+                {
+                    tbWords.Text = "zero";
+                }
+
+
+                tbWords.Text = words[num];
+                i++;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                tbWords.Text = "Error. Number should be less than 10000.\n";
             }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            tbxNumbers.Clear();
-        }
-
-        private string Converting(int num)
-        {
-            string[] words = new string[] { "", "one", "two", "three", "four", "five", "six", "seven", 
-                "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen",
-                "eighteen", "nineteen", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
-
-            if (num > 999)
-            {
-                int n = num / 1000;
-                return $"{words[n]} thousand ";
-                num -= n * 1000;
-            }
-
-            if (num > 99)
-            {
-                int n = num / 100;
-                return $"{words[n]} hundred ";
-                num -= n * 100;
-            }
-
-            if (num > 20)
-            {
-                int n = num / 10;
-                return $"{words[n + 18]} ";
-                num -= n * 10;
-            }
-            return words[num];
+            tbNumbers.Clear();
         }
     }
 }
