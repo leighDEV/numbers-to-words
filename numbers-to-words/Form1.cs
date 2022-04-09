@@ -21,8 +21,6 @@ namespace numbers_to_words
         {
             try
             {
-                int i = 1;
-
                 string text = tbNumbers.Text;
                 int num;
 
@@ -32,36 +30,33 @@ namespace numbers_to_words
                 "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen",
                 "eighteen", "nineteen", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
 
-
                 if (num > 999)
                 {
                     int n = num / 1000;
-                    tbWords.Text = tbWords + $"{words[n]} thousand ";
+                    tbWords.Text = tbWords.Text + $"{words[n]} thousand ";
                     num -= n * 1000;
                 }
 
                 if (num > 99)
                 {
                     int n = num / 100;
-                    tbWords.Text = tbWords + $"{words[n]} hundred ";
+                    tbWords.Text = tbWords.Text + $"{words[n]} hundred ";
                     num -= n * 100;
                 }
 
                 if (num > 20)
                 {
                     int n = num / 10;
-                    tbWords.Text = tbWords + $"{words[n + 18]} ";
+                    tbWords.Text = tbWords.Text + $"{words[n + 18]} ";
                     num -= n * 10;
                 }
 
-                if (num == 0)
+                if (tbNumbers.Text == "0")
                 {
                     tbWords.Text = "zero";
                 }
 
-
-                tbWords.Text = words[num];
-                i++;
+                tbWords.Text = tbWords.Text + words[num];
             }
             catch (Exception ex)
             {
@@ -72,6 +67,7 @@ namespace numbers_to_words
         private void btnClear_Click(object sender, EventArgs e)
         {
             tbNumbers.Clear();
+            tbWords.Clear();
         }
     }
 }
