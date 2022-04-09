@@ -30,7 +30,7 @@ namespace numbers_to_words
                 "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen",
                 "eighteen", "nineteen", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
 
-                if (num > 999)
+                if (num > 999 && num < 10000)
                 {
                     long n = num / 1000;
                     tbWords.Text = tbWords.Text + $"{words[n]} thousand ";
@@ -61,7 +61,7 @@ namespace numbers_to_words
             }
             catch (Exception ex)
             {
-                tbWords.Text = "Error. Number should be less than trillion.\n";
+                tbWords.Text = "Error. Number should be less than a 10000.\n";
             }
         }
 
