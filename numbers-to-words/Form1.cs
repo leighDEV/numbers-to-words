@@ -22,9 +22,9 @@ namespace numbers_to_words
             try
             {
                 string text = tbNumbers.Text;
-                int num;
+                long num;
 
-                int.TryParse(text, out num);
+                long.TryParse(text, out num);
 
                 string[] words = new string[] { "", "one", "two", "three", "four", "five", "six", "seven",
                 "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen",
@@ -32,21 +32,21 @@ namespace numbers_to_words
 
                 if (num > 999)
                 {
-                    int n = num / 1000;
+                    long n = num / 1000;
                     tbWords.Text = tbWords.Text + $"{words[n]} thousand ";
                     num -= n * 1000;
                 }
 
                 if (num > 99)
                 {
-                    int n = num / 100;
+                    long n = num / 100;
                     tbWords.Text = tbWords.Text + $"{words[n]} hundred ";
                     num -= n * 100;
                 }
 
                 if (num > 20)
                 {
-                    int n = num / 10;
+                    long n = num / 10;
                     tbWords.Text = tbWords.Text + $"{words[n + 18]} ";
                     num -= n * 10;
                 }
@@ -57,10 +57,11 @@ namespace numbers_to_words
                 }
 
                 tbWords.Text = tbWords.Text + words[num];
+                
             }
             catch (Exception ex)
             {
-                tbWords.Text = "Error. Number should be less than 10000.\n";
+                tbWords.Text = "Error. Number should be less than trillion.\n";
             }
         }
 
