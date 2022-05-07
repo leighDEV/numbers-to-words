@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace numbers_to_words
 {
-    public partial class Form1 : Form
+    public partial class Form1 : MaterialForm
     {
         public Form1()
         {
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Pink900, Primary.Pink800, Primary.Pink500, Accent.Pink200, TextShade.WHITE);
         }
 
         private void btnConvert_Click(object sender, EventArgs e)
@@ -59,7 +65,7 @@ namespace numbers_to_words
                 tbWords.Text = tbWords.Text + words[num];
                 
             }
-            catch (Exception ex)
+            catch
             {
                 tbWords.Text = "Error. Number should be less than a 10000.\n";
             }
