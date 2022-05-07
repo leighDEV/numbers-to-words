@@ -44,17 +44,18 @@
             this.btnConvert.Depth = 0;
             this.btnConvert.HighEmphasis = true;
             this.btnConvert.Icon = null;
-            this.btnConvert.Location = new System.Drawing.Point(33, 145);
+            this.btnConvert.Location = new System.Drawing.Point(33, 136);
             this.btnConvert.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnConvert.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnConvert.Name = "btnConvert";
             this.btnConvert.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnConvert.Size = new System.Drawing.Size(501, 36);
+            this.btnConvert.Size = new System.Drawing.Size(515, 36);
             this.btnConvert.TabIndex = 8;
             this.btnConvert.Text = "Convert";
             this.btnConvert.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnConvert.UseAccentColor = false;
             this.btnConvert.UseVisualStyleBackColor = true;
+            this.btnConvert.Click += new System.EventHandler(this.btnConvert_Click);
             // 
             // tbWords
             // 
@@ -66,10 +67,10 @@
             this.tbWords.Depth = 0;
             this.tbWords.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbWords.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.tbWords.Location = new System.Drawing.Point(33, 190);
+            this.tbWords.Location = new System.Drawing.Point(33, 181);
             this.tbWords.MouseState = MaterialSkin.MouseState.HOVER;
             this.tbWords.Name = "tbWords";
-            this.tbWords.Size = new System.Drawing.Size(501, 165);
+            this.tbWords.Size = new System.Drawing.Size(515, 145);
             this.tbWords.TabIndex = 9;
             this.tbWords.Text = "";
             // 
@@ -88,17 +89,18 @@
             this.tbNumbers.MouseState = MaterialSkin.MouseState.OUT;
             this.tbNumbers.Multiline = false;
             this.tbNumbers.Name = "tbNumbers";
-            this.tbNumbers.Size = new System.Drawing.Size(501, 50);
+            this.tbNumbers.Size = new System.Drawing.Size(515, 50);
             this.tbNumbers.TabIndex = 10;
             this.tbNumbers.Text = "";
             this.tbNumbers.TrailingIcon = null;
             // 
             // Form1
             // 
+            this.AcceptButton = this.btnConvert;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(573, 387);
+            this.ClientSize = new System.Drawing.Size(589, 350);
             this.Controls.Add(this.tbNumbers);
             this.Controls.Add(this.tbWords);
             this.Controls.Add(this.btnConvert);
@@ -106,7 +108,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(573, 387);
+            this.MinimumSize = new System.Drawing.Size(573, 350);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Numbers to Words Converter";

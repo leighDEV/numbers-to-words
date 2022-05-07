@@ -27,6 +27,7 @@ namespace numbers_to_words
         {
             try
             {
+                tbWords.ResetText();
                 string text = tbNumbers.Text;
                 long num;
 
@@ -69,12 +70,6 @@ namespace numbers_to_words
             {
                 tbWords.Text = "Error. Number should be less than a 10000.\n";
             }
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            tbNumbers.Clear();
-            tbWords.Clear();
         }
     }
 }
