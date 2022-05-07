@@ -65,7 +65,7 @@
             this.tbWords.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tbWords.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbWords.Depth = 0;
-            this.tbWords.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbWords.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbWords.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tbWords.Location = new System.Drawing.Point(33, 181);
             this.tbWords.MouseState = MaterialSkin.MouseState.HOVER;
@@ -81,7 +81,7 @@
             this.tbNumbers.AnimateReadOnly = false;
             this.tbNumbers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNumbers.Depth = 0;
-            this.tbNumbers.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbNumbers.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNumbers.Hint = "Numbers";
             this.tbNumbers.LeadingIcon = null;
             this.tbNumbers.Location = new System.Drawing.Point(33, 77);

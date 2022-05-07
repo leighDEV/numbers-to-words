@@ -1,19 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 
 namespace numbers_to_words
 {
+    /// <summary>
+    /// A numbers (9999) to words converter using
+    /// C# Windows Forms application
+    /// </summary>
     public partial class Form1 : MaterialForm
     {
+        #region Constructors
         public Form1()
         {
             InitializeComponent();
@@ -22,7 +19,13 @@ namespace numbers_to_words
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Pink900, Primary.Pink800, Primary.Pink500, Accent.Pink200, TextShade.WHITE);
         }
+        #endregion
 
+        /// <summary>
+        /// Converting the numbers to words
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConvert_Click(object sender, EventArgs e)
         {
             try
