@@ -5,9 +5,9 @@
   <p align="center">
     My C# Windows Forms Programming Small Projects
     <br />
-    <a href="https://github.com/leighTOR/ITEC103Week8-dynamic/issues">Report Bug</a>
+    <a href="https://github.com/leighDEV/numbers-to-words-winforms/issues">Report Bug</a>
     ·
-    <a href="https://github.com/leighTOR/ITEC103Week8-dynamic/issues">Request Feature</a>
+    <a href="https://github.com/leighDEV/numbers-to-words-winforms/issues">Request Feature</a>
   </p>
 </div>
 
@@ -59,7 +59,7 @@ A numbers (9999) to words converter desktop application. This is just a simple p
 
 Email: [leighest2021@gmail.com](mailto:leighest2021@gmail.com)
 
-Project Link: [numbers-to-words-winforms](https://github.com/leighTOR/ITEC103Week8-dynamic)
+Project Link: [numbers-to-words-winforms](https://github.com/leighDEV/numbers-to-words-winforms)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
